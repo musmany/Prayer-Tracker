@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-100 text-gray-800">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prayer History</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-semibold text-blue-700">🕋 Prayer Tracker</h1>
+      <nav class="space-x-4">
+        <a href="dashboard.html" class="text-gray-700 hover:text-blue-600 font-medium">Dashboard</a>
+        <a href="history.html" class="text-blue-700 font-semibold border-b-2 border-blue-700">History</a>
+        <a href="mosques.html" class="text-gray-700 hover:text-blue-600 font-medium">Mosques Near Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-1 max-w-7xl mx-auto px-4 py-6">
+    <!-- Title -->
+    <h2 class="text-2xl font-bold mb-6 text-center text-blue-800">📅 Prayer History</h2>
+
+    <!-- Filters -->
+    <div class="flex flex-wrap gap-4 justify-center items-center mb-6">
+      <button id="last7" class="filter-btn bg-blue-100 text-blue-800 px-4 py-2 rounded hover:bg-blue-200">Last 7 Days</button>
+      <button id="last30" class="filter-btn bg-blue-100 text-blue-800 px-4 py-2 rounded hover:bg-blue-200">Last 30 Days</button>
+
+      <!-- Custom Range -->
+      <div class="flex gap-2 items-center">
+        <input type="date" id="startDate" class="border px-2 py-1 rounded text-sm" />
+        <span class="text-gray-500">to</span>
+        <input type="date" id="endDate" class="border px-2 py-1 rounded text-sm" />
+        <button id="applyRange" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 text-sm">Apply</button>
+      </div>
+    </div>
+
+    <!-- Calendar Grid -->
+    <div id="calendarGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <!-- Cards will be injected here -->
+    </div>
+  </main>
+
+  <!-- Script -->
+  <script type="module" src="./history.js"></script>
+</body>
+</html>

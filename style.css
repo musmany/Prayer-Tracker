@@ -1,0 +1,21 @@
+.nav-link {
+  color: #555;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link.active {
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #1d4ed8;
+  border-radius: 2px;
+}
