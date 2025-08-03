@@ -3,7 +3,7 @@
 import {
   auth,
   signInWithEmailAndPassword
-} from "./firebase-config";
+} from "./firebase-config.js";
 
 // Elements
 const loginForm = document.getElementById("loginForm");
